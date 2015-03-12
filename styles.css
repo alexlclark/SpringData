@@ -1,0 +1,123 @@
+body {
+  color: #fcd116; 
+  background: red;
+  background-image: url("seamlessRed.jpg"); 
+  font-family: 'Helvetica', sans-serif;
+  font-size: 80%;
+}
+
+	
+a { //defining the link styles
+  color: gray;
+  text-decoration: none;
+}
+  a:visited {
+    color: #1a5952;
+  }
+  a:hover, {
+    color: #0599c2;
+    text-decoration: underline;
+  }
+  .threeCol {
+  -webkit-column-count: 3; /* Ch, Saf, And, BB  */
+     -moz-column-count: 3; /* Fx */
+          column-count: 3; /* IE 10, Op 11.1+ */
+
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+
+  -webkit-column-rule: 2px solid #000000;
+     -moz-column-rule: 2px solid #000000;
+          column-rule: 2px solid #000000;
+}
+.rotateHammer {
+	width: 950px; 
+	margin:10px;
+  -webkit-transform: rotate(3deg); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+      -ms-transform: rotate(3deg); /* IE 9 */
+          transform: rotate(3deg); /* IE 10, Fx 16+, Op 12.1+ */
+}
+.marquee {
+    position: absolute;
+    white-space: nowrap;
+    -webkit-animation: rightThenLeft 11s linear;
+}
+.col-md-1 { /*we're beginning with a gradient background with opacity blending. defining static color for older browsers*/
+	background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+
+	color:white;
+	padding-top: 35px;
+  -webkit-transform: rotate(360deg); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 
+  changed rotation for .col-md-1, col-md-2, col-md-4 to 360 degrees to have no visual effect. Will remove code later if this is preferable.
+  * */
+ 
+      -ms-transform: rotate(360deg); /* IE 9 */
+          transform: rotate(360deg); /* IE 10, Fx 16+, Op 12.1+ */
+        }
+.col-md-2 {
+	background-color:white;
+	color:blue;
+	padding-top: 30px;
+  -webkit-transform: rotate(360deg); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+      -ms-transform: rotate(360deg); /* IE 9 */
+          transform: rotate(360deg); /* IE 10, Fx 16+, Op 12.1+ */         
+=        
+}
+.col-md-4 {
+	background-color:green;
+	color:white;
+	padding-top: 30px;
+  -webkit-transform: rotate(360deg); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+      -ms-transform: rotate(360deg); /* IE 9 */
+          transform: rotate(360deg); /* IE 10, Fx 16+, Op 12.1+ */         
+        
+}
+.col-sm-4 {
+	background-color:lime;
+	color:black;
+	padding-top: 30px;
+  -webkit-transform: rotate(360deg); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+      -ms-transform: rotate(360deg); /* IE 9 */
+          transform: rotate(360deg); /* IE 10, Fx 16+, Op 12.1+ */         
+        
+}
+.col-md-8 {
+	background-color:purple;
+	color:white;
+	padding-top: 30px;
+  -webkit-transform: rotate(360deg); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+      -ms-transform: rotate(360deg); /* IE 9 */
+          transform: rotate(360deg); /* IE 10, Fx 16+, Op 12.1+ */         
+        
+}
+.col-md-6 {
+	background: #1e5799; /* for older browsers */
+background: -moz-linear-gradient(top,  #1e5799 0%, #207cca 23%, #207cca 23%, #2989d8 50%, #7db9e8 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(23%,#207cca), color-stop(23%,#207cca), color-stop(50%,#2989d8), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #1e5799 0%,#207cca 23%,#207cca 23%,#2989d8 50%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #1e5799 0%,#207cca 23%,#207cca 23%,#2989d8 50%,#7db9e8 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #1e5799 0%,#207cca 23%,#207cca 23%,#2989d8 50%,#7db9e8 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #1e5799 0%,#207cca 23%,#207cca 23%,#2989d8 50%,#7db9e8 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+
+	color:pink;
+	padding-top: 30px;
+  -webkit-transform: rotate(359deg); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+      -ms-transform: rotate(359deg); /* IE 9 */
+          transform: rotate(359deg); /* IE 10, Fx 16+, Op 12.1+ */         
+        
+}
+
+
+@-webkit-keyframes rightThenLeft {
+    0%   {left: 0%;}
+    50%  {left: 100%;}
+    100% {left: 0%;}
+}
