@@ -3,7 +3,7 @@ google.load("visualization", "1", {
 });
 google.setOnLoadCallback(drawChart);
 function drawChart() {
-	var data = google.visualization.arrayToDataTable([["album", "daysDiffMaxSev"], ["Soundtrack - Frozen", 7], ["Beyonce - Beyonce", 7], ["Taylor Swift - 1989", -3], ["One Direction - Midnight Memories", -7], ["Eminem - The Marshall Mathers LP 2", 7], ["Lorde - Pure Heroine", -1], ["Luke Bryan - Crash My Party", 0], ["Katy Perry - Prism", 0], ["Garth Brooks - Blame It All On My Roots: Five Decades Of Influences", 7], ["Florida Georgia Line - Here's To The Good Times", 2]
+	var data = google.visualization.arrayToDataTable([["Album", "Days To Pirate"], ["Soundtrack - Frozen", 7], ["Beyonce - Beyonce", 7], ["Taylor Swift - 1989", -3], ["One Direction - Midnight Memories", -7], ["Eminem - The Marshall Mathers LP 2", 7], ["Lorde - Pure Heroine", -1], ["Luke Bryan - Crash My Party", 0], ["Katy Perry - Prism", 0], ["Garth Brooks - Blame It All On My Roots: Five Decades Of Influences", 7], ["Florida Georgia Line - Here's To The Good Times", 2]
 
 	/*
 	 Full chart below
@@ -22,7 +22,7 @@ function drawChart() {
 	]);
 
 	var options = {
-		title : 'Lengths of dinosaurs, in meters',
+		title : 'Time between album release and pirated, private BitTorrent tracker release (waffles.fm)',
 		legend : {
 			position : 'none'
 		},
