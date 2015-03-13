@@ -1,3 +1,5 @@
+
+<!-- 
 var myTextStyle = {
 color: 'yellow', 
 fontName: 'arial', 
@@ -48,4 +50,4 @@ console.log(options.height)
 // Instantiate and draw our chart, passing in some options.
 var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
 chart.draw(data, options);
-}
+}-->
