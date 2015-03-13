@@ -20,8 +20,8 @@ var arraysFat = [] //created big empty array to hold smaller date/val arrays0
 for (var i=0;/*spacesdont  matter in for loops*/i<jsonFREDData.observations.length; i++){ //all for loops ever will appear like this. start, length,
 
 var itemArray=[];
-itemArray.push(jsonFREDData.observations[i].date);//adding date and value to item array (the small array)
-itemArray.push( Number(jsonFREDData.observations[i].value)); //noted itemarray as number
+itemArray.push(jsonFREDData.observations[i].Album);//adding date and value to item array (the small array)
+itemArray.push( Number(jsonFREDData.observations[i].Days)); //noted itemarray as number
 
 
 arraysFat.push(itemArray); //add my little array to the larger one, arraysFat
@@ -30,8 +30,8 @@ arraysFat.push(itemArray); //add my little array to the larger one, arraysFat
 }
 // Create the data table.
 var data = new google.visualization.DataTable();
-data.addColumn('string', 'date');
-data.addColumn('number', 'value');
+data.addColumn('number', 'Album');
+data.addColumn('number', 'Days');
 data.addRows(arraysFat); // this has to equal the array at the top (the fat one)
 
 // Set chart options
