@@ -20,8 +20,8 @@ var arraysFat = [] //created big empty array to hold smaller date/val arrays0
 for (var i=0;/*spacesdont  matter in for loops*/i<albumData.observations.length; i++){ //all for loops ever will appear like this. start, length,
 
 var itemArray=[];
-itemArray.push(albumData.observations[i].Album);//adding date and value to item array (the small array)
-itemArray.push( Number(albumData.observations[i].Days)); //noted itemarray as number
+itemArray.push(albumData.observations[i].album);//adding date and value to item array (the small array)
+itemArray.push( Number(albumData.observations[i].daysDiffMaxSev)); //noted itemarray as number
 
 
 arraysFat.push(itemArray); //add my little array to the larger one, arraysFat
@@ -30,8 +30,8 @@ arraysFat.push(itemArray); //add my little array to the larger one, arraysFat
 }
 // Create the data table.
 var data = new google.visualization.DataTable();
-data.addColumn('number', 'Album');
-data.addColumn('number', 'Days');
+data.addColumn('string', 'album');
+data.addColumn('number', 'daysDiffMaxSev');
 data.addRows(arraysFat); // this has to equal the array at the top (the fat one)
 
 // Set chart options
