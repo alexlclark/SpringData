@@ -1,6 +1,6 @@
 body {
-  color: #fcd116; 
-  background: red;
+  color: #000000; 
+  background: black;
   background-image: url("seamlessRed.jpg"); 
   font-family: 'Helvetica', sans-serif;
   font-size: 80%;
@@ -9,7 +9,6 @@ body {
  site - selecting specific colors for a wallpaper
  http://www.colourlovers.com/pattern/2875/Gothic_Wallpaper 
  */
- 
 a { //defining the link styles
   color: gray;
   text-decoration: none;
