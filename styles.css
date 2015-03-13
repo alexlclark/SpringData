@@ -9,7 +9,7 @@ body {
  site - selecting specific colors for a wallpaper
  http://www.colourlovers.com/pattern/2875/Gothic_Wallpaper 
  */
-a { //defining the link styles
+a { 
   color: gray;
   text-decoration: none;
 }
@@ -103,6 +103,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
   -webkit-transform: rotate(359deg); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
       -ms-transform: rotate(359deg); /* IE 9 */
           transform: rotate(359deg); /* IE 10, Fx 16+, Op 12.1+ */         
+        
+}
+/* You MUST set doctype as html in order for the marginleft/auto definitions to return the same centered div in all browsers */
+.logoAndChart {
+	background: #1e5799; 
+	color:pink;
+	padding-top: 30px;
+	margin-left: auto;
+    margin-right: auto;        
         
 }
 
