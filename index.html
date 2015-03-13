@@ -23,35 +23,23 @@
       google.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Dinosaur', 'Length'],
-          ['Acrocanthosaurus (top-spined lizard)', 12.2],
-          ['Albertosaurus (Alberta lizard)', 9.1],
-          ['Allosaurus (other lizard)', 12.2],
-          ['Apatosaurus (deceptive lizard)', 22.9],
-          ['Archaeopteryx (ancient wing)', 0.9],
-          ['Argentinosaurus (Argentina lizard)', 36.6],
-          ['Baryonyx (heavy claws)', 9.1],
-          ['Brachiosaurus (arm lizard)', 30.5],
-          ['Ceratosaurus (horned lizard)', 6.1],
-          ['Coelophysis (hollow form)', 2.7],
-          ['Compsognathus (elegant jaw)', 0.9],
-          ['Deinonychus (terrible claw)', 2.7],
-          ['Diplodocus (double beam)', 27.1],
-          ['Dromicelomimus (emu mimic)', 3.4],
-          ['Gallimimus (fowl mimic)', 5.5],
-          ['Mamenchisaurus (Mamenchi lizard)', 21.0],
-          ['Megalosaurus (big lizard)', 7.9],
-          ['Microvenator (small hunter)', 1.2],
-          ['Ornithomimus (bird mimic)', 4.6],
-          ['Oviraptor (egg robber)', 1.5],
-          ['Plateosaurus (flat lizard)', 7.9],
-          ['Sauronithoides (narrow-clawed lizard)', 2.0],
-          ['Seismosaurus (tremor lizard)', 45.7],
-          ['Spinosaurus (spiny lizard)', 12.2],
-          ['Supersaurus (super lizard)', 30.5],
-          ['Tyrannosaurus (tyrant lizard)', 15.2],
-          ['Ultrasaurus (ultra lizard)', 30.5],
-          ['Velociraptor (swift robber)', 1.8]]);
+        
+          
+  
+  ["chartPos","albumName","albumArtist","album","releaseDate","waffleDate","daysDiff","daysDiffMaxSev"],
+  [1,"Frozen","Soundtrack","Soundtrack - Frozen","11/25/13","12/2/13",7,7],
+  [2,"Beyonce","Beyonce","Beyonce - Beyonce","12/13/13","12/20/13",7,7],
+  [3,"1989","Taylor Swift","Taylor Swift - 1989","11/27/14","11/24/14",-3,-3],
+  [4,"Midnight Memories","One Direction","One Direction - Midnight Memories","11/25/13","11/18/13",-7,-7],
+  [5,"The Marshall Mathers LP 2","Eminem","Eminem - The Marshall Mathers LP 2","9/20/13","10/31/13",41,7],
+  [6,"Pure Heroine","Lorde","Lorde - Pure Heroine","9/27/13","9/26/13",-1,-1],
+  [7,"Crash My Party","Luke Bryan","Luke Bryan - Crash My Party","8/13/13","8/13/13",0,0],
+  [8,"Prism","Katy Perry","Katy Perry - Prism","11/17/13","11/17/13",0,0],
+  [9,"Blame It All On My Roots: Five Decades Of Influences","Garth Brooks","Garth Brooks - Blame It All On My Roots: Five Decades Of Influences","11/28/13","3/14/14",106,7],
+  [10,"Here's To The Good Times","Florida Georgia Line","Florida Georgia Line - Here's To The Good Times","12/4/12","12/6/12",2,2]
+
+          
+          ]);
 
         var options = {
           title: 'Lengths of dinosaurs, in meters',
