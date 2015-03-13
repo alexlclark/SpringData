@@ -107,11 +107,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
 }
 /* You MUST set doctype as html in order for the marginleft/auto definitions to return the same centered div in all browsers */
 .logoAndChart {
+	margin-left: auto;
+    margin-right: auto;     
 	background: #1e5799; 
 	color:pink;
-	padding-top: 30px;
-	margin-left: auto;
-    margin-right: auto;        
+	   
         
 }
 
