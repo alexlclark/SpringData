@@ -17,11 +17,11 @@ function drawChart() {
 //NEW - Use a for loop to  make an array of arrays out of relevant JSON data
 var arraysFat = [] //created big empty array to hold smaller date/val arrays0
 
-for (var i=0;/*spacesdont  matter in for loops*/i<jsonFREDData.observations.length; i++){ //all for loops ever will appear like this. start, length,
+for (var i=0;/*spacesdont  matter in for loops*/i<albumData.observations.length; i++){ //all for loops ever will appear like this. start, length,
 
 var itemArray=[];
-itemArray.push(jsonFREDData.observations[i].Album);//adding date and value to item array (the small array)
-itemArray.push( Number(jsonFREDData.observations[i].Days)); //noted itemarray as number
+itemArray.push(albumData.observations[i].Album);//adding date and value to item array (the small array)
+itemArray.push( Number(albumData.observations[i].Days)); //noted itemarray as number
 
 
 arraysFat.push(itemArray); //add my little array to the larger one, arraysFat
