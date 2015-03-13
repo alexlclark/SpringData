@@ -1,4 +1,4 @@
-<script type="text/javascript">
+
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
@@ -41,7 +41,7 @@
         var chart = new google.visualization.Histogram(document.getElementById('chart_div'));
         chart.draw(data, options);
       }
-    </script>
+
 
 /*
 <!-- 
