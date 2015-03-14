@@ -27,7 +27,7 @@ function drawChart() {
 			position : 'none'
 		},
 		 hAxis: { title: "Days from album release to torrent appearance on waffles.fm", textStyle: {color: '#fcd116', fontName: 'arial', fontSize: 10} },
- vAxis: { textStyle: {color: '#fcd116', fontName: 'arial', fontSize: 10} },
+ vAxis: { title: "Number of albums in range", textStyle: {color: '#fcd116', fontName: 'arial', fontSize: 10} },
 	};
 
 	var chart = new google.visualization.Histogram(document.getElementById('chart_div'));
