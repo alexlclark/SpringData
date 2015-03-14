@@ -31,6 +31,6 @@ Created a function within histogram to resize the chart to the maxwidth of the p
 This required the removal of the exact dimensions from the .html
 
 To center the image, I attempted to make a div with center alignment, but was unable to do so.
-Set maxwidth directly in image attributes to 85% to match the chart width.
-Used html <center> tag to center image.
-Used padding to include space between image and chart
+Used html <center> tag to center logo image.
+Used padding to include space between image and chart. This resulted in a skewed chart size, so lowered padding to 30px.
+Set maxwidth of logo image directly in image attributes to 75%.
