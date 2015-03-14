@@ -34,18 +34,18 @@ a {
           column-rule: 2px solid #000000;
 }
 
-/* You MUST set doctype as html in order for the marginleft/auto definitions to return the same centered div in all browsers */
 .logoAndChart {
-	margin-left: auto;
-    margin-right: auto;     
+	display: block;
 	background: #1e5799; 
 	color:pink;
+	
         
 }
 
 #chart_div {
-    width:100%;
+    width:85%;
     height:20%;
+    margin: 0 auto;
 }
 
 @-webkit-keyframes rightThenLeft {
