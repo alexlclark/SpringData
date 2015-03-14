@@ -1,46 +1,93 @@
-google.load("visualization", "1", {
-	packages : ["corechart"]
-});
-google.setOnLoadCallback(drawChart);
-function drawChart() {
-	var data = google.visualization.arrayToDataTable([["Album", "Days To Pirate"], ["Soundtrack - Frozen", 7], ["Beyonce - Beyonce", 7], ["Taylor Swift - 1989", -3], ["One Direction - Midnight Memories", -7], ["Eminem - The Marshall Mathers LP 2", 7], ["Lorde - Pure Heroine", -1], ["Luke Bryan - Crash My Party", 0], ["Katy Perry - Prism", 0], ["Garth Brooks - Blame It All On My Roots: Five Decades Of Influences", 7], ["Florida Georgia Line - Here's To The Good Times", 2]
-
-	/*
-	 Full chart below
-	 ["chartPos","albumName","albumArtist","album","releaseDate","waffleDate","daysDiff","daysDiffMaxSev"],
-	 [1,"Frozen","Soundtrack","Soundtrack - Frozen","11/25/13","12/2/13",7,7],
-	 [2,"Beyonce","Beyonce","Beyonce - Beyonce","12/13/13","12/20/13",7,7],
-	 [3,"1989","Taylor Swift","Taylor Swift - 1989","11/27/14","11/24/14",-3,-3],
-	 [4,"Midnight Memories","One Direction","One Direction - Midnight Memories","11/25/13","11/18/13",-7,-7],
-	 [5,"The Marshall Mathers LP 2","Eminem","Eminem - The Marshall Mathers LP 2","9/20/13","10/31/13",41,7],
-	 [6,"Pure Heroine","Lorde","Lorde - Pure Heroine","9/27/13","9/26/13",-1,-1],
-	 [7,"Crash My Party","Luke Bryan","Luke Bryan - Crash My Party","8/13/13","8/13/13",0,0],
-	 [8,"Prism","Katy Perry","Katy Perry - Prism","11/17/13","11/17/13",0,0],
-	 [9,"Blame It All On My Roots: Five Decades Of Influences","Garth Brooks","Garth Brooks - Blame It All On My Roots: Five Decades Of Influences","11/28/13","3/14/14",106,7],
-	 [10,"Here's To The Good Times","Florida Georgia Line","Florida Georgia Line - Here's To The Good Times","12/4/12","12/6/12",2,2]
-	 */
-	]);
-
-	var options = {
-		title : 'Time between album release and pirated, private BitTorrent tracker release',
-		legend : {
-			position : 'none'
-		},colors: ['#e7711c'],
-		 hAxis: { title: "Days from album release to torrent appearance on waffles.fm", textStyle: {color: '#0673b2', fontName: 'arial', fontSize: 10} },
- vAxis: { title: "Number of albums in range", textStyle: {color: '#0673b2', fontName: 'arial', fontSize: 10} },
-	};
-
-	var chart = new google.visualization.Histogram(document.getElementById('chart_div'));
-	chart.draw(data, options);
-	function resize () {
-    // change dimensions if necessary
-    chart.draw(data, options);
+var albumData = {//this actually wasn't used directly in the latest version of the histogram
+	"observations" : [{
+		"chartPos" : 1,
+		"albumName" : "Frozen",
+		"albumArtist" : "Soundtrack",
+		"album" : "Soundtrack - Frozen",
+		"releaseDate" : "11/25/13",
+		"waffleDate" : "12/2/13",
+		"daysDiff" : 7,
+		"daysDiffMaxSev" : 7
+	}, {
+		"chartPos" : 2,
+		"albumName" : "Beyonce",
+		"albumArtist" : "Beyonce",
+		"album" : "Beyonce - Beyonce",
+		"releaseDate" : "12/13/13",
+		"waffleDate" : "12/20/13",
+		"daysDiff" : 7,
+		"daysDiffMaxSev" : 7
+	}, {
+		"chartPos" : 3,
+		"albumName" : "1989",
+		"albumArtist" : "Taylor Swift",
+		"album" : "Taylor Swift - 1989",
+		"releaseDate" : "11/27/14",
+		"waffleDate" : "11/24/14",
+		"daysDiff" : -3,
+		"daysDiffMaxSev" : -3
+	}, {
+		"chartPos" : 4,
+		"albumName" : "Midnight Memories",
+		"albumArtist" : "One Direction",
+		"album" : "One Direction - Midnight Memories",
+		"releaseDate" : "11/25/13",
+		"waffleDate" : "11/18/13",
+		"daysDiff" : -7,
+		"daysDiffMaxSev" : -7
+	}, {
+		"chartPos" : 5,
+		"albumName" : "The Marshall Mathers LP 2",
+		"albumArtist" : "Eminem",
+		"album" : "Eminem - The Marshall Mathers LP 2",
+		"releaseDate" : "9/20/13",
+		"waffleDate" : "10/31/13",
+		"daysDiff" : 41,
+		"daysDiffMaxSev" : 7
+	}, {
+		"chartPos" : 6,
+		"albumName" : "Pure Heroine",
+		"albumArtist" : "Lorde",
+		"album" : "Lorde - Pure Heroine",
+		"releaseDate" : "9/27/13",
+		"waffleDate" : "9/26/13",
+		"daysDiff" : -1,
+		"daysDiffMaxSev" : -1
+	}, {
+		"chartPos" : 7,
+		"albumName" : "Crash My Party",
+		"albumArtist" : "Luke Bryan",
+		"album" : "Luke Bryan - Crash My Party",
+		"releaseDate" : "8/13/13",
+		"waffleDate" : "8/13/13",
+		"daysDiff" : 0,
+		"daysDiffMaxSev" : 0
+	}, {
+		"chartPos" : 8,
+		"albumName" : "Prism",
+		"albumArtist" : "Katy Perry",
+		"album" : "Katy Perry - Prism",
+		"releaseDate" : "11/17/13",
+		"waffleDate" : "11/17/13",
+		"daysDiff" : 0,
+		"daysDiffMaxSev" : 0
+	}, {
+		"chartPos" : 9,
+		"albumName" : "Blame It All On My Roots: Five Decades Of Influences",
+		"albumArtist" : "Garth Brooks",
+		"album" : "Garth Brooks - Blame It All On My Roots: Five Decades Of Influences",
+		"releaseDate" : "11/28/13",
+		"waffleDate" : "3/14/14",
+		"daysDiff" : 106,
+		"daysDiffMaxSev" : 7
+	}, {
+		"chartPos" : 10,
+		"albumName" : "Here's To The Good Times",
+		"albumArtist" : "Florida Georgia Line",
+		"album" : "Florida Georgia Line - Here's To The Good Times",
+		"releaseDate" : "12/4/12",
+		"waffleDate" : "12/6/12",
+		"daysDiff" : 2,
+		"daysDiffMaxSev" : 2
+	}]
 }
-if (window.addEventListener) {
-    window.addEventListener('resize', resize);
-}
-else {
-    window.attachEvent('onresize', resize);
-}
-}
-
