@@ -3,19 +3,16 @@
 	<head>
 		<!--Initial code below from example @ https://developers.google.com/chart/interactive/docs/quick_start-->
 		<!--Load the AJAX API-->
-		
-			<!-- TODO!!!>>
-				Questions: 
-				Will bootstrap let me use a single centered column with grid width of 12? Want to autosize the logo I chose.
-				Why doesn't my div center?
-				How can I use my big data table in data.js and only extract the elements I need for the styles
-				Why is there a warning when I defined my doctype. w3s made me do it.
-				Can I add other attributes to the hover (such as release date/pirated date)
-				Possible to include images in hover
-				
-				
-				-->
-		
+
+		<!-- TODO!!!>>
+		Questions:
+		How can I use my big data table in data.js and only extract the elements I need for the styles. Assuming I need a var with specific parts of the data
+		Why is there a warning when I defined my doctype. w3s made me do it D:
+		Can I add other attributes to the hover (such as release date/pirated date)
+		Possible to include images in hover for the histogram?
+		What causes some of my comments not to be grayed out and classified as comments? (2nd to last line below)
+		-->
+
 		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 		<!--COMMENTING OUT DATA AND SCRIPTS
 		<script type="text/javascript" src="data.js"></script>-->
@@ -25,18 +22,22 @@
 
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-
 		<link rel="stylesheet" href="styles.css"/>
 
 	</head>
 
 	<body>
-		<!--Div that will hold the pie chart--><div id="logoAndChart">
-			
-			 <img src="http://www.clarkroom.com/wp-content/uploads/2015/01/clarkroom_full_white.png" style='width:100%;' border="0" alt="Null">
+		<!--Div that will hold the pie chart-->
+		<div id="logoAndChart">
+			<div id="maindiv">
+				<img src="http://www.clarkroom.com/wp-content/uploads/2015/01/clarkroom_full_white.png" style='width:100%;' border="0" alt="Null">
+				<p>
+				<p>
+					<div id="chart_div"></div>
+				</p>
 
-<p>
-		<div id="chart_div"></div></p>
-</div>
+			</div>
+		</div>
+		//end of maindiv
 	</body>
 </html>
