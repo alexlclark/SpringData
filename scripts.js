@@ -22,14 +22,26 @@ function drawChart() {
 	]);
 
 	var options = {
-		title : 'Time between album release and pirated, private BitTorrent tracker release (waffles.fm)',
+		title : 'Time between album release and pirated, private BitTorrent tracker release',
 		legend : {
 			position : 'none'
 		},
+		 hAxis: { title: "Days from album release to torrent appearance on waffles.fm", textStyle: {color: '#fcd116', fontName: 'arial', fontSize: 10} },
+ vAxis: { textStyle: {color: '#fcd116', fontName: 'arial', fontSize: 10} },
 	};
 
 	var chart = new google.visualization.Histogram(document.getElementById('chart_div'));
 	chart.draw(data, options);
+	function resize () {
+    // change dimensions if necessary
+    chart.draw(data, options);
+}
+if (window.addEventListener) {
+    window.addEventListener('resize', resize);
+}
+else {
+    window.attachEvent('onresize', resize);
+}
 }
 
 /*
