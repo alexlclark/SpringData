@@ -1,55 +1,46 @@
 body {
-  color: #000000; 
-  background: black;
-  background-image: url("seamlessGray.jpg"); 
-  font-family: 'Helvetica', sans-serif;
-  font-size: 80%;
+	color: #000000;
+	background: black;
+	background-image: url("seamlessGray.jpg");
+	font-family: 'Helvetica', sans-serif;
+	font-size: 80%;
 }
 /*
  site - selecting specific colors for a wallpaper
- http://www.colourlovers.com/pattern/2875/Gothic_Wallpaper 
+ http://www.colourlovers.com/pattern/2875/Gothic_Wallpaper
  */
-a { 
-  color: gray;
-  text-decoration: none;
+a {
+	color: gray;
+	text-decoration: none;
 }
-  a:visited {
-    color: #1a5952;
-  }
-  a:hover, {
-    color: #0599c2;
-    text-decoration: underline;
-  }
-  .threeCol {
-  -webkit-column-count: 3; /* Ch, Saf, And, BB  */
-     -moz-column-count: 3; /* Fx */
-          column-count: 3; /* IE 10, Op 11.1+ */
-
-  -webkit-column-gap: 10px;
-     -moz-column-gap: 10px;
-          column-gap: 10px;
-
-  -webkit-column-rule: 2px solid #000000;
-     -moz-column-rule: 2px solid #000000;
-          column-rule: 2px solid #000000;
+a:visited {
+	color: #1a5952;
 }
-
-.logoAndChart {
-	display: block;
-	background: #1e5799; 
-	color:pink;
-	
-        
+a:hover, {
+color: #0599c2;
+text-decoration: underline;
+}
+.threeCol {
+	-webkit-column-count: 3; /* Ch, Saf, And, BB  */
+	-moz-column-count: 3; /* Fx */
+	column-count: 3; /* IE 10, Op 11.1+ */
+	-webkit-column-gap: 10px;
+	-moz-column-gap: 10px;
+	column-gap: 10px;
+	-webkit-column-rule: 2px solid #000000;
+	-moz-column-rule: 2px solid #000000;
+	column-rule: 2px solid #000000;
 }
 
 #chart_div {
-    width:85%;
-    height:20%;
-    margin: 0 auto;
+	padding: 200px;
+	width: 85%;
+	height: 20%;
+	margin: 0 auto;
 }
 
 @-webkit-keyframes rightThenLeft {
-    0%   {left: 0%;}
-    50%  {left: 100%;}
-    100% {left: 0%;}
+0%   {left: 0%;}
+50%  {left: 100%;}
+100% {left: 0%;}
 }
